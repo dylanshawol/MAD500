@@ -1,4 +1,5 @@
-<div *ngFor="let content of contentList">
+<div *ngFor="let content of (contentList | contentPipe: contentList[0].type : contentList)"
+[ngModel]="content">
 
   <div id="content-div">
     <img *ngIf="content.imgUrl != null"
@@ -20,4 +21,34 @@
     </div>
   </div>
 </div>
+
+
+
+
+
+
+
+
+<!--<div *ngFor="let content of contentList">-->
+
+<!--  <div id="content-div">-->
+<!--    <img *ngIf="content.imgUrl != null"-->
+<!--         (click)="printID(content.id)"-->
+<!--         width="15%" src="{{content.imgUrl}}" alt=""/>-->
+
+<!--    <h1>{{content.title}}</h1>-->
+
+<!--    <p id="author-p">Author: {{content.author}}</p>-->
+<!--    <p>{{content.body}}</p>-->
+
+<!--    <br>-->
+
+<!--    <div id="misc-div">-->
+<!--      <p>Misc Info</p>-->
+<!--      <p>ID: {{content.id}}</p>-->
+<!--      <p *ngIf="content.type != null">Type: {{content.type}}</p>-->
+<!--      <p *ngIf="content.tags != null">Tags: {{content.tags}}</p>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</div>-->
 
