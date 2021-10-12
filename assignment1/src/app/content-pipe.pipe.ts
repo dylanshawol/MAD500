@@ -7,6 +7,6 @@ import { Content } from "./helper-files/content-interface";
 export class ContentPipePipe implements PipeTransform {
 
   transform(contentArray: Content[], type: string): Content[] {
-    return contentArray.filter(c => c.type?.includes(type))
+    return contentArray.filter(c => c.type == type);
   }
 }

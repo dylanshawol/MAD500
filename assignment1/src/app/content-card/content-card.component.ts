@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-content-card',
@@ -7,12 +7,18 @@ import {Component, OnInit} from '@angular/core';
 })
 
 export class ContentCardComponent implements OnInit {
-  constructor() {
+  @Input() content: any;
 
+  constructor() {
+    this.content = {}
   }
 
   ngOnInit(): void {
 
+  }
+
+  showID(): void {
+    console.log(this.content.id)
   }
 
 }
