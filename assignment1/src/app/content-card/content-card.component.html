@@ -18,7 +18,7 @@
     <p *ngIf="content.type != null">Type: {{content.type}}</p>
     <div *ngIf="content.tags != null">
       Tags:
-      <div *ngFor="let tag of content.tags" style="display: inline-block">
+      <div *ngFor="let tag of content.tags" id="tag-div">
         <p appHoverStyle tagIndex="{{tag.index}}">{{tag}}&nbsp;</p>
       </div>
     </div>
