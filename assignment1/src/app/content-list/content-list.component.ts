@@ -13,47 +13,47 @@ export class ContentListComponent implements OnInit {
   constructor() {
 
     this.contentList = [{
-      title: 'Dogs',
+      title: 'Nissan GTR Skyline R34',
       author: 'Dylan',
-      body: 'Dogs are pretty cool',
+      body: 'A JDM classic.',
       id: 0,
-      imgUrl: 'https://images.unsplash.com/photo-1529429617124-95b109e86bb8?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1935&q=80',
-      type: 'pet'
+      imgUrl: 'https://i.imgur.com/98zRFy7.jpeg',
+      type: 'retro sports car'
     },
       {
-        title: 'Cats',
+        title: 'Porsche 911 GT3',
         author: 'Dylan',
-        body: 'Cats are alright',
+        body: 'One of the most iconic and recognizable cars in it\'s GT3 configuration.',
         id: 1,
-        imgUrl: 'https://images.unsplash.com/photo-1561948955-570b270e7c36?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=301&q=80',
-        tags: ['pet', 'animal', 'meh'],
-        type: 'pet'
+        imgUrl: 'https://i.imgur.com/V0NbwCf.jpeg',
+        tags: ['porsche', '911', 'GT3', 'race'],
+        type: 'sports car'
       },
       {
-        title: 'Parrot',
+        title: 'Lamborghini Countach',
         author: 'Dylan',
-        body: 'Parrots can speak like humans',
+        body: 'An 80\'s classic, the Countach was the stepping stone of today\'s current Lamborghini designs.',
         id: 2,
-        imgUrl: 'https://images.unsplash.com/photo-1555169062-013468b47731?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=387&q=80',
-        tags: ['bird', 'chirp', 'parrot'],
-        type: 'bird'
+        imgUrl: 'https://i.imgur.com/ZhrKXvs.jpeg',
+        tags: ['lamborghini', 'countach', 'classic supercars'],
+        type: 'supercar'
       },
       {
-        title: 'Bears',
+        title: 'SSC Tuatara',
         author: 'Dylan',
-        body: 'Some bears can run up to 55 km/h',
+        body: 'The fastest production car in the world. This twin turbocharged 5.9-liter V-8 monster produces 1750 horsepower and can reach a top speed of 508 km/h.',
         id: 3,
-        type: 'dangerous',
-        tags: ['bear', 'animal', 'fast']
+        imgUrl: 'https://i.imgur.com/HcALW0Y.jpeg',
+        type: 'hypercar',
+        tags: ['ssc', 'tuatara', 'fastest car', 'worlds fastest']
       },
       {
-        title: 'Dolphins',
+        title: 'Ferrari F40',
         author: 'Dylan',
-        body: 'Dolphins are among the smartest of mammals',
+        body: 'A retro classic.',
         id: 4,
-        imgUrl: 'https://images.unsplash.com/photo-1570481662006-a3a1374699e8?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=465&q=80',
-        tags: ['pet', 'animal', 'cool'],
-        type: 'aquatic'
+        tags: ['ferrari', 'f40', 'retro'],
+        type: 'retro supercar'
       }];
 
 
@@ -66,13 +66,18 @@ export class ContentListComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  addCarToList(newCarFromChild: Content) {
+    this.contentList.push(newCarFromChild);
+    this.contentList = Object.assign([], this.contentList);
+  }
+
   checkForType(type: string): void {
     let filter = this.contentList.filter(c => c.type === type);
 
     if (filter.length > 0) {
-      this.message = "Animal Found";
+      this.message = "Car Found";
     } else {
-      this.message = "No Animal found of that type";
+      this.message = "No Car found of that type";
     }
     // console.log("spread operator", ...this.contentList);
     // console.log("just the array", this.contentList);
