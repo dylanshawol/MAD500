@@ -7,19 +7,25 @@
   {{message}}
 </div>
 
-<app-content-card *ngFor="let content of contentList | contentPipe: 'pet';" [content]="content">
+<app-messages></app-messages>
+
+<app-content-card *ngFor="let content of contentList" [content]="content">
 
 </app-content-card>
 
-<app-content-card *ngFor="let content of contentList | contentPipe: 'bird';" [content]="content">
+<!--<app-content-card *ngFor="let content of contentList | contentPipe: 'pet';" [content]="content">-->
 
-</app-content-card>
+<!--</app-content-card>-->
 
-<app-content-card *ngFor="let content of contentList | contentPipe: 'dangerous';" [content]="content">
+<!--<app-content-card *ngFor="let content of contentList | contentPipe: 'bird';" [content]="content">-->
 
-</app-content-card>
+<!--</app-content-card>-->
 
-<app-content-card *ngFor="let content of contentList | contentPipe: 'aquatic';" [content]="content">
+<!--<app-content-card *ngFor="let content of contentList | contentPipe: 'dangerous';" [content]="content">-->
 
-</app-content-card>
+<!--</app-content-card>-->
+
+<!--<app-content-card *ngFor="let content of contentList | contentPipe: 'aquatic';" [content]="content">-->
+
+<!--</app-content-card>-->
 

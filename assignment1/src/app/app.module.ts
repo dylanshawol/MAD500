@@ -7,6 +7,7 @@ import { ContentListComponent } from './content-list/content-list.component';
 import { ContentPipePipe } from './content-pipe.pipe';
 import {FormsModule} from "@angular/forms";
 import { HoverStyleDirective } from './hover-style.directive';
+import { MessagesComponent } from './messages/messages.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { HoverStyleDirective } from './hover-style.directive';
     ContentListComponent,
     ContentPipePipe,
     HoverStyleDirective,
+    MessagesComponent,
   ],
   imports: [
     BrowserModule,
