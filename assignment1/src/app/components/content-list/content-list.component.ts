@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {Content} from "../helper-files/content-interface";
-import {ContentService} from "../content-service/content.service";
+import {Content} from "../../helper-files/content-interface";
+import {ContentService} from "../../services/content-service/content.service";
 
 @Component({
   selector: 'app-content-list',
@@ -18,7 +18,7 @@ export class ContentListComponent implements OnInit {
 
   ngOnInit(): void {
     // this.contentList = this.contentService.getContent();
-    this.contentService.getContentObs().subscribe(content => this.contentList = content);
+    this.contentService.getContent().subscribe(content => this.contentList = content);
   }
 
 
