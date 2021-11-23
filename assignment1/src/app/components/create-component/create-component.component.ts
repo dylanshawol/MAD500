@@ -1,6 +1,8 @@
 import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import {ContentService} from "../../services/content-service/content.service";
 import {Content} from "../../helper-files/content-interface";
+import {MatDialog, MatDialogConfig} from "@angular/material/dialog";
+import {AddContentDialogComponent} from "../add-content-dialog/add-content-dialog.component";
 
 @Component({
   selector: 'app-create-component',
@@ -9,11 +11,18 @@ import {Content} from "../../helper-files/content-interface";
 })
 export class CreateComponentComponent implements OnInit {
 
-  constructor(private  contentService: ContentService) { }
+  constructor(private  contentService: ContentService, public dialog: MatDialog) { }
 
   ngOnInit(): void {
   }
 
+
+  public openDialog() {
+    const dialogConfig = new MatDialogConfig();
+    this.dialog.open(AddContentDialogComponent, dialogConfig);
+  }
+
+  // TODO: Finish Assignment 7
   createContent() {
 
   }

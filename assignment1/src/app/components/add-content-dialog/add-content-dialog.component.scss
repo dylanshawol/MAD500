@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Montagu+Slab&display=swap');
+
+#input-wrapper {
+  padding: 15px;
+
+  mat-form-field {
+    display: block;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    font-family: 'Sen', sans-serif;
+  }
+
+  h1 {
+    font-family: 'Montagu Slab', serif;
+    margin-top: 0;
+    text-align: center;
+  }
+
+  button {
+    margin: 10px auto;
+    display: block;
+    font-family: 'Sen', sans-serif;
+  }
+}
+
+
