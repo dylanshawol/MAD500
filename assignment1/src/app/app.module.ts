@@ -17,6 +17,9 @@ import {MatButtonModule} from "@angular/material/button";
 import {MatInputModule} from "@angular/material/input";
 import { AddContentDialogComponent } from './components/add-content-dialog/add-content-dialog.component';
 import {MatDialogModule} from "@angular/material/dialog";
+import { ContentDetailComponent } from './components/content-detail/content-detail.component';
+import { NotFoundComponent } from './components/not-found/not-found.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -28,6 +31,8 @@ import {MatDialogModule} from "@angular/material/dialog";
     MessagesComponent,
     CreateComponentComponent,
     AddContentDialogComponent,
+    ContentDetailComponent,
+    NotFoundComponent,
   ],
   imports: [
     BrowserModule,
@@ -37,7 +42,13 @@ import {MatDialogModule} from "@angular/material/dialog";
     BrowserAnimationsModule,
     MatButtonModule,
     MatInputModule,
-    MatDialogModule
+    MatDialogModule,
+    RouterModule.forRoot([
+      { path: 'content/:id', component: ContentDetailComponent },
+      { path: 'content', component: ContentDetailComponent },
+      { path: '**', component: NotFoundComponent }
+
+    ])
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -24,4 +24,8 @@ export class ContentService {
   }
 
 
+  getContentItem(id: number): Observable<Content[]> {
+    return this.http.get<Content[]>("api/content/" + id);
+  }
+
 }

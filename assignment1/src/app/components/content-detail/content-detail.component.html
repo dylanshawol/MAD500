@@ -5,9 +5,7 @@
   <img *ngIf="content.imgUrl == null"
        width="100%" src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Missing-image-232x150.png" alt=""/>
 
-  <a [routerLink]="['/content', content.id]" routerLinkActive="active">
-    <h1><span appHoverStyle>{{content.title}}</span></h1>
-  </a>
+  <h1><span appHoverStyle>{{content.title}}</span></h1>
 
   <p id="author-p">Author: {{content.author}}</p>
   <p>{{content.body}}</p>
@@ -26,4 +24,3 @@
     </div>
   </div>
 </div>
-
